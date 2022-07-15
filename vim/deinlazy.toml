@@ -1,0 +1,24 @@
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_source = '''
+    call deoplete#enable()
+    call deoplete#custom#option({
+    \ 'auto_complete_delay': 0,
+    \ 'camel_case': 0,
+    \ 'ignore_case': 0,
+    \ 'refresh_always': 0,
+    \ 'smart_case': 1,
+    \ 'buffer_path': 1,
+    \ 'auto_complete_start_length': 1,
+    \ 'max_list': 100,
+    \ })
+'''
+on_event = 'InsertEnter'
